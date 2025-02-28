@@ -2,6 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -59,16 +60,9 @@ ol {
   box-shadow: 0 11px 20px rgba(130, 130, 130, 0.15) !important;
 }
 
-.ibm-font{
-  font-family: var(--IBM_plex_Sans), serif;
-}
 
 .dm-sans-font{
   font-family: DM Sans, sans-serif;
-}
-
-.nunito-sans{
-  font-family: var(--Nunito_Sans), sans-serif;
 }
 
 .scrollable-container::-webkit-scrollbar {
