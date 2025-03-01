@@ -1,5 +1,15 @@
-export default function Home() {
-    return (
-        <h1 className="tw-bg-white tw-text-red-500">Hello world!</h1>
-    )
+'use client';
+
+
+
+import SignIn from "@/components/containers/auth/login";
+
+export default function LoginPage() {
+    // Placeholder function for now
+    const handleSignIn = (data: { email: string; password: string }) => {
+        console.log("User signed in with:", data);
+        alert(`Email: ${data.email}\nPassword: ${data.password}`);
+    };
+
+    return <SignIn onSignIn={handleSignIn} />;
 }
