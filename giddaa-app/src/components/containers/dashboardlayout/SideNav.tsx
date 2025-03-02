@@ -5,7 +5,7 @@ import {
     Image,
     Link,
     Menu,
-    MenuButton, MenuItem, MenuList,
+    MenuButton, MenuList,
     Text,
     Icon,
     VStack

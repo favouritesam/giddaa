@@ -2,7 +2,8 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 import "../globals.css";
 import SideNav from "@/components/containers/dashboardlayout/SideNav";
-
+import { Box } from "@chakra-ui/react";
+import React from "react";
 
 const dmSans = DM_Sans({ subsets: ["latin"] });
 
@@ -17,15 +18,14 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-
-        <div className={dmSans.className} suppressHydrationWarning={true}>
-            <div className={'tw-divide-x tw-divide-[#D0D5DD]'}>
-                {/*<SideNav/>*/}
-                <div>
+        <Box className={dmSans.className} suppressHydrationWarning={true}>
+            <Box>
+                {/*<SideNav />*/}
+                <Box>
                     {children}
-                </div>
-            </div>
-        </div>
-
+                </Box>
+            </Box>
+        </Box>
     );
 }
+

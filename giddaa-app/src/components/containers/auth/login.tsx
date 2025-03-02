@@ -78,7 +78,7 @@ export default function SignIn() {
                                     isLoading={formik.isSubmitting}
                                     _hover={{background: "#335F32"}}
                                 >
-                                    Sign in
+                                    Sign in in
                                 </Button>
 
                                 <Text textAlign="center" color="gray.600" py=".4em" fontSize="16px">

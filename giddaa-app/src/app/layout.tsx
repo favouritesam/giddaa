@@ -1,7 +1,7 @@
 import {Metadata} from "next";
 import React from "react";
-
-
+import {Box} from "@chakra-ui/react";
+import SideNav from "@/components/containers/dashboardlayout/SideNav";
 
 
 export const metadata: Metadata = {
@@ -9,14 +9,17 @@ export const metadata: Metadata = {
     description: "Giddaa is an Estate Management app that helps users securely find, manage, and acquire properties with ease.",
 };
 
-export default function RootLayout(props: { children: React.ReactNode }) {
-    const { children } = props
+export default async function RootLayout({children,}: Readonly<{ children: React.ReactNode; }>) {
     return (
-        <html suppressHydrationWarning>
-        <body>
 
+        <html lang="en">
+        <body suppressHydrationWarning={true}>
+        <Box>
+            {/*<SideNav />*/}
             {children}
+        </Box>
         </body>
         </html>
-    )
+
+    );
 }

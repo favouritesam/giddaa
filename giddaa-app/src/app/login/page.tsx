@@ -1,9 +1,5 @@
-import {LoginPage} from "@/components/containers/auth/login";
+import SignIn from "@/components/containers/auth/login";
 
-export default function UserLogin(){
-    return(
-        <div>
-            <LoginPage/>
-        </div>
-    )
+export default function LoginPage() {
+    return <SignIn />;
 }
