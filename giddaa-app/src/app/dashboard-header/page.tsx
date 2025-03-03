@@ -1,9 +1,10 @@
-import {Text} from "@chakra-ui/react";
+import {Box} from "@chakra-ui/react";
+import DashboardHeader from "@/components/containers/dashboardlayout/dashboard-header";
 
-export default function DashboardPage(){
+export default function DashboardHeaderPage(){
     return(
-        <Text>
-            blieve nmmm
-        </Text>
+        <Box>
+           <DashboardHeader/>
+        </Box>
     )
 }

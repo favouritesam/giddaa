@@ -58,6 +58,14 @@ ul {
 ol {
   list-style-type: auto;
 }
+select {
+  -webkit-appearance: none !important;
+  -moz-appearance: none !important;
+  appearance: none !important;
+  background-image: none !important;
+  background-color: white !important;
+}
+
 
 .scrollable-container {
   overflow-y: auto;

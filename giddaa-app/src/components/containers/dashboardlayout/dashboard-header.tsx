@@ -10,7 +10,7 @@ import {
     Text
 } from "@chakra-ui/react";
 import { FaChevronDown } from "react-icons/fa";
-import EstateList from "@/components/containers/dashboardlayout/estate-card/estate-list";
+import EstateList from "@/app/estate-list/page";
 
 
 export default function DashboardHeader() {

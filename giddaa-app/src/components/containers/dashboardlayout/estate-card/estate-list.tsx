@@ -1,6 +1,8 @@
+"use client"
 import {Box, Button, Flex, Text} from "@chakra-ui/react";
 import PaginatedEstateList from "@/components/containers/dashboardlayout/estate-card/paginated-estateList";
 import {Plus} from "lucide-react";
+import {useRouter} from "next/navigation";
 
 export default function EstateList() {
     const estates = [
@@ -10,6 +12,7 @@ export default function EstateList() {
         { name: "Maple Residency", address: "No 13 Fisher Street, Wuse II, Federal Capital Territory, Abuja", houses: 18, Image: "/img/estate.png" },
         { name: "Ocean View", address: "No 13 Fisher Street, Wuse II, Federal Capital Territory, Abuja No 13 Fisher Street, Wuse II, Federal Capital Territory, Abuja", houses: 22, Image: "/img/estate.png" },
     ];
+    const router = useRouter();
 
     return (
         <Box p={4}>
@@ -32,6 +35,7 @@ export default function EstateList() {
                             justifyContent="center"
                             px={4}
                             cursor="pointer"
+                            onClick={() => router.push("/create-estate")}
                     >
                         Create Estate
                     </Button>
