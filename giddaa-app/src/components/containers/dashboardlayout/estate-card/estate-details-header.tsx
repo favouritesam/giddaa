@@ -4,13 +4,6 @@ import {
     Image,
     Flex,
     Button,
-    Grid,
-    GridItem,
-    Tabs,
-    TabList,
-    TabPanels,
-    Tab,
-    TabPanel,
     HStack, MenuButton, MenuList, Menu
 } from "@chakra-ui/react";
 import React, {useState} from "react";
@@ -143,73 +136,6 @@ const EstateDetailsHeader: React.FC<EstateDetailsProps> = ({estate}) => {
                     <Box w="full" borderBottom="1px solid #F0F0F0"/>
                 </Box>
             </Box>
-
-            {/* Scrollable Content */}
-            {/*<Box mt="100px" bg="white" display='flex' flexDirection="column" maxW="95%" p='1%'>*/}
-            {/*    <Tabs variant="enclosed" colorScheme="green">*/}
-            {/*        <TabList overflowX="auto">*/}
-            {/*            <Tab>Details</Tab>*/}
-            {/*            <Tab>Properties</Tab>*/}
-            {/*            <Tab>Allocation</Tab>*/}
-            {/*            <Tab>Prospects</Tab>*/}
-            {/*            <Tab>Activity</Tab>*/}
-            {/*        </TabList>*/}
-
-            {/*<TabPanels>*/}
-            {/*    <TabPanel>*/}
-            {/*        <Flex gap={4} overflowX="auto" mb={6}>*/}
-            {/*            {estate.images.map((image, index) => (*/}
-            {/*                <Box key={index} position="relative">*/}
-            {/*                    <Image*/}
-            {/*                        src={image.url}*/}
-            {/*                        alt={image.label}*/}
-            {/*                        borderRadius="md"*/}
-            {/*                        boxSize={{base: "150px", md: "200px"}}*/}
-            {/*                    />*/}
-            {/*                    <Text*/}
-            {/*                        position="absolute"*/}
-            {/*                        bottom={2}*/}
-            {/*                        left={2}*/}
-            {/*                        bg="gray.800"*/}
-            {/*                        color="white"*/}
-            {/*                        p={1}*/}
-            {/*                        borderRadius="md"*/}
-            {/*                        fontSize="sm"*/}
-            {/*                    >*/}
-            {/*                        {image.label}*/}
-            {/*                    </Text>*/}
-            {/*                </Box>*/}
-            {/*            ))}*/}
-            {/*        </Flex>*/}
-
-            {/*        <Grid templateColumns={{base: "1fr", md: "repeat(2, 1fr)"}} gap={4} mb={4}>*/}
-            {/*            <GridItem><Text><b>Type:</b> {estate.type}</Text></GridItem>*/}
-            {/*            <GridItem><Text><b>Location:</b> {estate.location}</Text></GridItem>*/}
-            {/*            <GridItem><Text><b>City:</b> {estate.city}</Text></GridItem>*/}
-            {/*            <GridItem><Text><b>Address:</b> {estate.address}</Text></GridItem>*/}
-            {/*            <GridItem><Text><b>Completion Status:</b> {estate.completionStatus}</Text></GridItem>*/}
-            {/*            <GridItem><Text><b>Land Size:</b> {estate.landSize}</Text></GridItem>*/}
-            {/*        </Grid>*/}
-
-            {/*        <Text>*/}
-            {/*            {showMore ? estate.description : `${estate.description.substring(0, 150)}... `}*/}
-            {/*            <Button size="sm" colorScheme="blue" variant="link"*/}
-            {/*                    onClick={() => setShowMore(!showMore)}>*/}
-            {/*                {showMore ? "Read Less" : "Read More"}*/}
-            {/*            </Button>*/}
-            {/*        </Text>*/}
-
-            {/*        {estate.videoUrl && (*/}
-            {/*            <Box mt={4}>*/}
-            {/*                <a href={estate.videoUrl} target="_blank" rel="noopener noreferrer">*/}
-            {/*                    <Button colorScheme="blue">Watch Video</Button>*/}
-            {/*                </a>*/}
-            {/*            </Box>*/}
-            {/*        )}*/}
-            {/*    </TabPanel>*/}
-            {/*</TabPanels>*/}
-            {/*    </Tabs>*/}
-            {/*</Box>*/}
             <Box mt="100px" bg="white" display="flex" flexDirection="column" maxW="95%" p="1%">
                 <EstateTabs estate={estate}/>
             </Box>
