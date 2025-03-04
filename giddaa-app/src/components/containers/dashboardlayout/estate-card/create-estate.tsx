@@ -492,7 +492,10 @@ export default function CreateEstate() {
 
             <Center bg='#F0F0F0' h='67px' mt='1%' gap={10}>
                 <Button w='70px' h='39px' borderRadius='100px' border='1px solid #346633' color='#346633' variant="outline" onClick={() => router.push("/")}>Cancel</Button>
-                <Button w='113px' h='39px' borderRadius='100px'border='none' bg='#346633' color='#FFFFFF'>Create Estate</Button>
+                <Button w='113px' h='39px' borderRadius='100px'border='none' bg='#346633' color='#FFFFFF' cursor='pointer'  onClick={() => {
+                    const queryParams = new URLSearchParams(estateData as any).toString();
+                    router.push(`/estate-details?${queryParams}`);
+                }}>Create Estate</Button>
             </Center>
         </Box>
     );
