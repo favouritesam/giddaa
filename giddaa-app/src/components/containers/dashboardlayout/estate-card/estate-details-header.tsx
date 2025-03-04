@@ -48,7 +48,6 @@ const EstateDetailsHeader: React.FC<EstateDetailsProps> = ({estate}) => {
              mx="auto"
              px={{base: 4, md: 10, lg: 16}}
         >
-            {/* Sticky Header */}
             <Box
                 position="fixed"
                 top="0"
@@ -59,7 +58,7 @@ const EstateDetailsHeader: React.FC<EstateDetailsProps> = ({estate}) => {
                 // p={6}
                 boxShadow="md"
             >
-                <Box display='flex' flexDirection="column" maxW="95%" mx="auto" p='1%' >
+                <Box display='flex' flexDirection="column" maxW="95%" mx="auto" p='1%'>
                     <Box display='flex' justifyContent="space-between" alignItems="center" mt={2}>
                         <HStack>
                             <Button
@@ -114,16 +113,17 @@ const EstateDetailsHeader: React.FC<EstateDetailsProps> = ({estate}) => {
                                 </MenuButton>
                                 <MenuList p="12px" minW="130px" bg="white" h='162px' borderRadius='15px'
                                           border='1px #E1E1E1 solid' cursor='pointer'>
-                                    <Flex gap={10} alignItems='center'><Image src="/img/eye.png" alt="eye" w='16px'
-                                                                              h='12px'/><Text
-                                        fontWeight={400} fontSize={14}> View House</Text></Flex>
+                                    <Flex gap={10} alignItems='center'><Image src="/img/church.png" alt="church"
+                                                                              w='16px'
+                                                                              h='14.54px'/><Text
+                                        fontWeight={400} fontSize={14}> Add House</Text></Flex>
                                     <Flex gap={10} alignItems='center'>
-                                        <Image src="/img/edit.png" alt="edit" w='12px' h='12px'/>
-                                        <Text fontWeight={400} fontSize={14}> Edit Estate</Text>
+                                        <Image src="/img/share.svg" alt="share" w='14px' h='14px'/>
+                                        <Text fontWeight={400} fontSize={14}> Share Estate</Text>
                                     </Flex>
                                     <Flex gap={10} alignItems='center'>
-                                        <Image src="/img/house.png" alt="house" w='14px' h='12.16px'/>
-                                        <Text fontWeight={400} fontSize={14}> Add House</Text>
+                                        <Image src="/img/q.svg" alt="q" w='14px' h='14px'/>
+                                        <Text fontWeight={400} fontSize={14}> QR Code</Text>
                                     </Flex>
                                     <Flex gap={10} alignItems='center'>
                                         <Image src="/img/delete.png" alt="delete" w='12px' h='15px'/>
@@ -140,7 +140,7 @@ const EstateDetailsHeader: React.FC<EstateDetailsProps> = ({estate}) => {
                         <ChevronRightIcon color='#979797' size={14}/>
                         <Text fontWeight={400} fontSize="sm">{estate.name}</Text>
                     </HStack>
-                    <Box w="full" borderBottom="1px solid #F0F0F0" />
+                    <Box w="full" borderBottom="1px solid #F0F0F0"/>
                 </Box>
             </Box>
 
@@ -155,64 +155,64 @@ const EstateDetailsHeader: React.FC<EstateDetailsProps> = ({estate}) => {
             {/*            <Tab>Activity</Tab>*/}
             {/*        </TabList>*/}
 
-                    {/*<TabPanels>*/}
-                    {/*    <TabPanel>*/}
-                    {/*        <Flex gap={4} overflowX="auto" mb={6}>*/}
-                    {/*            {estate.images.map((image, index) => (*/}
-                    {/*                <Box key={index} position="relative">*/}
-                    {/*                    <Image*/}
-                    {/*                        src={image.url}*/}
-                    {/*                        alt={image.label}*/}
-                    {/*                        borderRadius="md"*/}
-                    {/*                        boxSize={{base: "150px", md: "200px"}}*/}
-                    {/*                    />*/}
-                    {/*                    <Text*/}
-                    {/*                        position="absolute"*/}
-                    {/*                        bottom={2}*/}
-                    {/*                        left={2}*/}
-                    {/*                        bg="gray.800"*/}
-                    {/*                        color="white"*/}
-                    {/*                        p={1}*/}
-                    {/*                        borderRadius="md"*/}
-                    {/*                        fontSize="sm"*/}
-                    {/*                    >*/}
-                    {/*                        {image.label}*/}
-                    {/*                    </Text>*/}
-                    {/*                </Box>*/}
-                    {/*            ))}*/}
-                    {/*        </Flex>*/}
+            {/*<TabPanels>*/}
+            {/*    <TabPanel>*/}
+            {/*        <Flex gap={4} overflowX="auto" mb={6}>*/}
+            {/*            {estate.images.map((image, index) => (*/}
+            {/*                <Box key={index} position="relative">*/}
+            {/*                    <Image*/}
+            {/*                        src={image.url}*/}
+            {/*                        alt={image.label}*/}
+            {/*                        borderRadius="md"*/}
+            {/*                        boxSize={{base: "150px", md: "200px"}}*/}
+            {/*                    />*/}
+            {/*                    <Text*/}
+            {/*                        position="absolute"*/}
+            {/*                        bottom={2}*/}
+            {/*                        left={2}*/}
+            {/*                        bg="gray.800"*/}
+            {/*                        color="white"*/}
+            {/*                        p={1}*/}
+            {/*                        borderRadius="md"*/}
+            {/*                        fontSize="sm"*/}
+            {/*                    >*/}
+            {/*                        {image.label}*/}
+            {/*                    </Text>*/}
+            {/*                </Box>*/}
+            {/*            ))}*/}
+            {/*        </Flex>*/}
 
-                    {/*        <Grid templateColumns={{base: "1fr", md: "repeat(2, 1fr)"}} gap={4} mb={4}>*/}
-                    {/*            <GridItem><Text><b>Type:</b> {estate.type}</Text></GridItem>*/}
-                    {/*            <GridItem><Text><b>Location:</b> {estate.location}</Text></GridItem>*/}
-                    {/*            <GridItem><Text><b>City:</b> {estate.city}</Text></GridItem>*/}
-                    {/*            <GridItem><Text><b>Address:</b> {estate.address}</Text></GridItem>*/}
-                    {/*            <GridItem><Text><b>Completion Status:</b> {estate.completionStatus}</Text></GridItem>*/}
-                    {/*            <GridItem><Text><b>Land Size:</b> {estate.landSize}</Text></GridItem>*/}
-                    {/*        </Grid>*/}
+            {/*        <Grid templateColumns={{base: "1fr", md: "repeat(2, 1fr)"}} gap={4} mb={4}>*/}
+            {/*            <GridItem><Text><b>Type:</b> {estate.type}</Text></GridItem>*/}
+            {/*            <GridItem><Text><b>Location:</b> {estate.location}</Text></GridItem>*/}
+            {/*            <GridItem><Text><b>City:</b> {estate.city}</Text></GridItem>*/}
+            {/*            <GridItem><Text><b>Address:</b> {estate.address}</Text></GridItem>*/}
+            {/*            <GridItem><Text><b>Completion Status:</b> {estate.completionStatus}</Text></GridItem>*/}
+            {/*            <GridItem><Text><b>Land Size:</b> {estate.landSize}</Text></GridItem>*/}
+            {/*        </Grid>*/}
 
-                    {/*        <Text>*/}
-                    {/*            {showMore ? estate.description : `${estate.description.substring(0, 150)}... `}*/}
-                    {/*            <Button size="sm" colorScheme="blue" variant="link"*/}
-                    {/*                    onClick={() => setShowMore(!showMore)}>*/}
-                    {/*                {showMore ? "Read Less" : "Read More"}*/}
-                    {/*            </Button>*/}
-                    {/*        </Text>*/}
+            {/*        <Text>*/}
+            {/*            {showMore ? estate.description : `${estate.description.substring(0, 150)}... `}*/}
+            {/*            <Button size="sm" colorScheme="blue" variant="link"*/}
+            {/*                    onClick={() => setShowMore(!showMore)}>*/}
+            {/*                {showMore ? "Read Less" : "Read More"}*/}
+            {/*            </Button>*/}
+            {/*        </Text>*/}
 
-                    {/*        {estate.videoUrl && (*/}
-                    {/*            <Box mt={4}>*/}
-                    {/*                <a href={estate.videoUrl} target="_blank" rel="noopener noreferrer">*/}
-                    {/*                    <Button colorScheme="blue">Watch Video</Button>*/}
-                    {/*                </a>*/}
-                    {/*            </Box>*/}
-                    {/*        )}*/}
-                    {/*    </TabPanel>*/}
-                    {/*</TabPanels>*/}
+            {/*        {estate.videoUrl && (*/}
+            {/*            <Box mt={4}>*/}
+            {/*                <a href={estate.videoUrl} target="_blank" rel="noopener noreferrer">*/}
+            {/*                    <Button colorScheme="blue">Watch Video</Button>*/}
+            {/*                </a>*/}
+            {/*            </Box>*/}
+            {/*        )}*/}
+            {/*    </TabPanel>*/}
+            {/*</TabPanels>*/}
             {/*    </Tabs>*/}
             {/*</Box>*/}
-                        <Box mt="100px" bg="white" display="flex" flexDirection="column" maxW="95%" p="1%">
-                            <EstateTabs estate={estate} />
-                         </Box>
+            <Box mt="100px" bg="white" display="flex" flexDirection="column" maxW="95%" p="1%">
+                <EstateTabs estate={estate}/>
+            </Box>
         </Box>
     );
 };
