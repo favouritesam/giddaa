@@ -1,10 +1,12 @@
-import {Box} from "@chakra-ui/react";
+'use client'
 import DashboardHeader from "@/components/containers/dashboardlayout/dashboard-header";
+import { Box } from "lucide-react";
 
-export default function DashboardHeaderPage(){
-    return(
+export default function DashboardPage() {
+
+    return (
         <Box>
-           <DashboardHeader/>
+            <DashboardHeader/>
         </Box>
-    )
+    );
 }

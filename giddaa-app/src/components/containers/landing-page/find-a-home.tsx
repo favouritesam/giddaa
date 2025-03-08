@@ -35,42 +35,42 @@ const RealEstateHero = () => {
             </Flex>
 
 
-            {/*<Flex*/}
-            {/*    maxWidth="309px"*/}
-            {/*    h="109px"*/}
-            {/*    display='flex'*/}
-            {/*    justifyContent="end"*/}
-            {/*    borderRadius="12px"*/}
-            {/*    border="2px solid"*/}
-            {/*    borderColor="transparent"*/}
-            {/*    position="relative"*/}
-            {/*    bg="#F9FAFB"*/}
-            {/*    boxShadow="md"*/}
-            {/*    _before={{*/}
-            {/*        content: '""',*/}
-            {/*        position: "absolute",*/}
-            {/*        inset: 0,*/}
-            {/*        borderRadius: "12px",*/}
-            {/*        padding: "2px",*/}
-            {/*        background: "linear-gradient(to right, #B8860B, #013220)",*/}
-            {/*        WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",*/}
-            {/*        WebkitMaskComposite: "destination-out",*/}
-            {/*    }}*/}
-            {/*>*/}
-            {/*    <Flex align="center" gap={4}>*/}
-            {/*        <Image src="/img/WavingHand.png" alt="wave icon" w="44px" h="44px"/>*/}
-            {/*        <Box>*/}
-            {/*            <Text fontSize="16px" fontWeight={700}>*/}
-            {/*                You’re Now on Giddaa <Text as="span" fontSize="16px" fontWeight={700}*/}
-            {/*                                           color="#346633">Buy</Text>*/}
-            {/*            </Text>*/}
-            {/*            <Text fontSize="16px" fontWeight={400} color="#000000" lineHeight="23px"*/}
-            {/*                  wordBreak="break-word">*/}
-            {/*                Find and buy your dream home on various purchase plans.*/}
-            {/*            </Text>*/}
-            {/*        </Box>*/}
-            {/*    </Flex>*/}
-            {/*</Flex>*/}
+            <Flex
+                maxWidth="309px"
+                h="109px"
+                display='flex'
+                justifyContent="end"
+                borderRadius="12px"
+                border="2px solid"
+                borderColor="transparent"
+                position="relative"
+                bg="#F9FAFB"
+                boxShadow="md"
+                _before={{
+                    content: '""',
+                    position: "absolute",
+                    inset: 0,
+                    borderRadius: "12px",
+                    padding: "2px",
+                    background: "linear-gradient(to right, #B8860B, #013220)",
+                    WebkitMask: "linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0)",
+                    WebkitMaskComposite: "destination-out",
+                }}
+            >
+                <Flex align="center" gap={4}>
+                    <Image src="/img/WavingHand.png" alt="wave icon" w="44px" h="44px"/>
+                    <Box>
+                        <Text fontSize="16px" fontWeight={700}>
+                            You’re Now on Giddaa <Text as="span" fontSize="16px" fontWeight={700}
+                                                       color="#346633">Buy</Text>
+                        </Text>
+                        <Text fontSize="16px" fontWeight={400} color="#000000" lineHeight="23px"
+                              wordBreak="break-word">
+                            Find and buy your dream home on various purchase plans.
+                        </Text>
+                    </Box>
+                </Flex>
+            </Flex>
 
 
                 <Flex justify='center' align='center'>

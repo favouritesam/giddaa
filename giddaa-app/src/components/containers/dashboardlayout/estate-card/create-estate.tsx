@@ -17,7 +17,7 @@ import {
     MenuItem
 } from "@chakra-ui/react";
 import {useRouter} from "next/navigation";
-import {ChevronDownIcon, Edit2,Trash} from "lucide-react";
+import {ChevronDownIcon, Edit2, Trash} from "lucide-react";
 
 type EstateDataType = {
     name: string;
@@ -91,7 +91,7 @@ export default function CreateEstate() {
         UK: ["London", "Manchester", "Birmingham", "Liverpool"]
     };
 
-    const defaultCities = ["Berlin", "New York", "Toronto", "London"]; // Default cities when no state is selected
+    const defaultCities = ["Berlin", "New York", "Toronto", "London"];
 
     const handleStateChange = (selectedState: keyof typeof statesWithCities) => {
         setEstateData((prev) => ({
@@ -120,7 +120,7 @@ export default function CreateEstate() {
 
             <HStack display='flex' gap='2%' mb='4%'>
                 <Button
-                    onClick={() => router.push("/")}
+                    onClick={() => router.push("/dashboard-header")}
                     variant="outline"
                     w='81px'
                     h='32px'
@@ -233,28 +233,27 @@ export default function CreateEstate() {
                             color="#335F32"
                             mt={1}
                         >
-                            {idx % 2 === 0 ? "Bedroom 1" : "Parlor"} {/* Alternating labels */}
+                            {idx % 2 === 0 ? "Bedroom 1" : "Parlor"}
                         </Text>
                     </Box>
                 ))}
             </HStack>
 
-            {/* Form Inputs */}
             <VStack align="stretch" mt='2%'>
                 <Flex
                     alignItems="center"
-                    gap='4%'
+                    gap='2%'
                     flexWrap="wrap"
                 >
 
-                    <FormControl w="270px">
+                    <FormControl w="210px">
                         <FormLabel fontSize="sm" mb='8px'>Name<span style={{color: "red"}}>*</span> </FormLabel>
                         <Input
                             name="name"
                             value={estateData.name}
                             onChange={handleInputChange}
                             sx={{
-                                width: "280px",
+                                width: "190px",
                                 height: "20px",
                                 borderRadius: "100px",
                                 border: "1px solid #D0D5DD",
@@ -263,7 +262,7 @@ export default function CreateEstate() {
                         />
                     </FormControl>
 
-                    <FormControl w="270px">
+                    <FormControl w="210px">
                         <FormLabel fontSize="sm" mb='8px'>
                             State <span style={{color: "red"}}>*</span>
                         </FormLabel>
@@ -272,7 +271,7 @@ export default function CreateEstate() {
                                 as={Button}
                                 rightIcon={<ChevronDownIcon/>}
                                 sx={{
-                                    width: "300px",
+                                    width: "220px",
                                     height: "42px",
                                     borderRadius: "100px",
                                     border: "1px solid #D0D5DD",
@@ -295,7 +294,7 @@ export default function CreateEstate() {
                         </Menu>
                     </FormControl>
 
-                    <FormControl w="270px">
+                    <FormControl w="210px">
                         <FormLabel fontSize="sm" mb='8px'>
                             City <span style={{color: "red"}}>*</span>
                         </FormLabel>
@@ -304,7 +303,7 @@ export default function CreateEstate() {
                                 as={Button}
                                 rightIcon={<ChevronDownIcon/>}
                                 sx={{
-                                    width: "300px",
+                                    width: "220px",
                                     height: "42px",
                                     borderRadius: "100px",
                                     border: "1px solid #D0D5DD",
@@ -328,14 +327,14 @@ export default function CreateEstate() {
                     </FormControl>
 
                     {/* Address Input */}
-                    <FormControl w="270px">
+                    <FormControl w="210px">
                         <FormLabel fontSize="sm" mb='8px'>Address <span style={{color: "red"}}>*</span></FormLabel>
                         <Input
                             name="address"
                             value={estateData.address}
                             onChange={handleInputChange}
                             sx={{
-                                width: "280px",
+                                width: "210px",
                                 height: "20px",
                                 borderRadius: "100px",
                                 border: "1px solid #D0D5DD",
@@ -345,15 +344,15 @@ export default function CreateEstate() {
                     </FormControl>
                 </Flex>
 
-                <Flex alignItems="center" gap='4%' flexWrap="wrap" mt='2%'>
-                    <FormControl w="270px">
+                <Flex alignItems="center" gap='3%' flexWrap="wrap" mt='2%'>
+                    <FormControl w="200px">
                         <FormLabel fontSize="sm" mb='8px'>Popular Landmark</FormLabel>
                         <Input
                             name="Popular Landmark"
                             value={estateData.landmark}
                             onChange={handleInputChange}
                             sx={{
-                                width: "280px",
+                                width: "190px",
                                 height: "20px",
                                 borderRadius: "100px",
                                 border: "1px solid #D0D5DD",
@@ -362,14 +361,14 @@ export default function CreateEstate() {
                         />
                     </FormControl>
 
-                    <FormControl w="270px">
+                    <FormControl w="200px">
                         <FormLabel fontSize="sm" mb='8px'>Estate Land (in Hectares)</FormLabel>
                         <Input
                             name="Estate Land"
                             value={estateData.estateLand}
                             onChange={handleInputChange}
                             sx={{
-                                width: "280px",
+                                width: "200px",
                                 height: "20px",
                                 borderRadius: "100px",
                                 border: "1px solid #D0D5DD",
@@ -379,7 +378,7 @@ export default function CreateEstate() {
                     </FormControl>
 
 
-                    <FormControl w="270px">
+                    <FormControl w="200px">
                         <FormLabel fontSize="sm" mb='8px'>
                             Completion Status <span style={{color: "red"}}>*</span>
                         </FormLabel>
@@ -388,7 +387,7 @@ export default function CreateEstate() {
                                 as={Button}
                                 rightIcon={<ChevronDownIcon/>}
                                 sx={{
-                                    width: "300px",
+                                    width: "220px",
                                     height: "42px",
                                     borderRadius: "100px",
                                     border: "1px solid #D0D5DD",
@@ -427,14 +426,14 @@ export default function CreateEstate() {
                     </FormControl>
 
                     <HStack>
-                        <FormControl w="270px">
+                        <FormControl w="200px">
                             <FormLabel fontSize="sm" mb='8px'>Video URL</FormLabel>
                             <Input
                                 name="videoUrl"
                                 value={estateData.videoUrl}
                                 onChange={handleInputChange}
                                 sx={{
-                                    width: "280px",
+                                    width: "210px",
                                     height: "20px",
                                     borderRadius: "100px",
                                     border: "1px solid #D0D5DD",
@@ -467,7 +466,7 @@ export default function CreateEstate() {
 
                 <FormControl w="400px" maxW="100%">
                     <FormLabel fontSize="sm" mb="8px">
-                        Description <span style={{ color: "red" }}>*</span>
+                        Description <span style={{color: "red"}}>*</span>
                     </FormLabel>
                     <Textarea
                         name="description"
@@ -487,14 +486,15 @@ export default function CreateEstate() {
                     />
                 </FormControl>
 
-
             </VStack>
 
             <Center bg='#F0F0F0' h='67px' mt='1%' gap={10}>
-                <Button w='70px' h='39px' borderRadius='100px' border='1px solid #346633' color='#346633' variant="outline" onClick={() => router.push("/")}>Cancel</Button>
-                <Button w='113px' h='39px' borderRadius='100px'border='none' bg='#346633' color='#FFFFFF' cursor='pointer'  onClick={() => {
+                <Button w='70px' h='39px' borderRadius='100px' border='1px solid #346633' color='#346633'
+                        variant="outline" onClick={() => router.push("/")}>Cancel</Button>
+                <Button w='113px' h='39px' borderRadius='100px' border='none' bg='#346633' color='#FFFFFF'
+                        cursor='pointer' onClick={() => {
                     const queryParams = new URLSearchParams(estateData as any).toString();
-                    router.push(`/estate-details?${queryParams}`);
+                    router.push(`/dashboard-header/estate-details?${queryParams}`);
                 }}>Create Estate</Button>
             </Center>
         </Box>

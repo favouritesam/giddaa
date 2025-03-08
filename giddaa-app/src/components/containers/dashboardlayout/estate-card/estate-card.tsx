@@ -54,7 +54,7 @@ const EstateCard = ({estate}) => {
                         w="74px"
                         h="24px"
                     >
-                        {estate.houses} Houses
+                        {estate.houses}
                     </Flex>
                 </Flex>
             </Box>

@@ -4,7 +4,11 @@ import PaginatedEstateList from "@/components/containers/dashboardlayout/estate-
 import {Plus} from "lucide-react";
 import {useRouter} from "next/navigation";
 
-export default function EstateList() {
+interface EstateListProps {
+    onCreateEstateClick: () => void; // Function to handle "Create Estate" button click
+}
+
+ const EstateList = ({ onCreateEstateClick }: EstateListProps) => {
     const estates = [
         { name: "Paradise Estate", address: "No 13 Fisher Street, Wuse II, Federal Capital Territory, Abuja No 13 Fisher Street, Wuse II, Federal Capital Territory, Abuja", houses: 16, Image: "/img/estate.png" },
         { name: "Sunset Estate", address: "No 13 Fisher Street, Wuse II, Federal Capital Territory, Abuja", houses: 20, Image: "/img/estate.png" },
@@ -12,7 +16,7 @@ export default function EstateList() {
         { name: "Maple Residency", address: "No 13 Fisher Street, Wuse II, Federal Capital Territory, Abuja", houses: 18, Image: "/img/estate.png" },
         { name: "Ocean View", address: "No 13 Fisher Street, Wuse II, Federal Capital Territory, Abuja No 13 Fisher Street, Wuse II, Federal Capital Territory, Abuja", houses: 22, Image: "/img/estate.png" },
     ];
-    const router = useRouter();
+
 
     return (
         <Box p={4}>
@@ -35,13 +39,14 @@ export default function EstateList() {
                             justifyContent="center"
                             px={4}
                             cursor="pointer"
-                            onClick={() => router.push("/create-estate")}
+                            onClick={onCreateEstateClick}
                     >
                         Create Estate
                     </Button>
                 </Flex>
             </Flex>
-            <PaginatedEstateList estates={estates} itemsPerPage={3} />
+            <PaginatedEstateList estates={estates} itemsPerPage={2} />
         </Box>
     );
 }
+export default EstateList;

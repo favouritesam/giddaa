@@ -14,7 +14,7 @@ import {
     Select,
     Input,
     Image,
-    InputGroup
+    InputGroup, useColorModeValue
 } from "@chakra-ui/react";
 import { FaChevronDown } from "react-icons/fa";
 
@@ -28,13 +28,29 @@ const currencyOptions = [
 
 const Navbar = () => {
     // const [currency, setCurrency] = useState("USD");
-    const [currency, setCurrency] = useState(currencyOptions[0]);
+    // const [currency, setCurrency] = useState(currencyOptions[0]);
+    const [currency, setCurrency] = useState("USD")
 
     const [activeMenu, setActiveMenu] = useState("Buy");
 
     return (
-        <Box bg='#FCFCFC' w='full'>
-            <Flex justifyContent='space-evenly' align="center" className="max-w-7xl mx-auto">
+        <Box bg='#FCFCFC' w='full'
+             // borderBottom={1}
+             borderStyle="solid"
+             // borderColor={useColorModeValue("gray.200", "gray.900")}
+             // bg={useColorModeValue("white", "gray.800")}
+             position="sticky"
+             top="0"
+             zIndex="sticky"
+        >
+            <Flex
+                justifyContent='space-evenly'
+                align="center"
+                minH="60px"
+                py={{ base: 2 }}
+                px={{ base: 4 }}
+                // justify="space-between"
+                className="max-w-7xl mx-auto">
                 <Image src="/img/GreenLogo.png" alt="logo" w="99.91px" h="39px" />
 
                 <Flex alignItems="center" gap={10}>

@@ -67,15 +67,17 @@ export default function SideNav({name = "James Mensah", email = "jamesmensah@gma
 
                             <MenuList shadow="lg" rounded="md" color={'#667085'} p="12" minW="150px"
                                       bg="white" h='100px' borderRadius='5px' border='1px #F9FAFB' mb='20px'>
-                                <Box mb='10px' fontWeight={400} fontSize='14px' display='flex' gap='10px'><Icon as={FaUser} color="#667085" mr={2}/>My Profile</Box>
-                                <Box fontWeight={400} fontSize='14px' display='flex' gap='10px'><Icon as={FaLock} color="#667085" mr={2}/>Change Password</Box>
+                                <Box mb='10px' fontWeight={400} fontSize='14px' display='flex' gap='10px'>
+                                    <Icon as={FaUser} color="#667085" mr={2}/>My Profile</Box>
+                                <Box fontWeight={400} fontSize='14px' display='flex' gap='10px'>
+                                    <Icon as={FaLock} color="#667085" mr={2}/>Change Password</Box>
                                 <Image
                                     src="/img/line.png"
                                     alt="line logo"
                                     width="full"
                                     backgroundColor={'#335F32'}
                                 />
-                                <Box color={'#E40000'} fontSize='12px'
+                                <Box color={'#E40000'} fontSize='12px' cursor='pointer'
                                      fontWeight={700} mt={8} display='flex' gap='10px'>
                                     <Image src="/img/off.png" alt="off"/>
                                     Logout

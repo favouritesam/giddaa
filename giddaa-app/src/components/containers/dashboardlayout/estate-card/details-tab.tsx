@@ -1,6 +1,6 @@
 "use client";
 
-import {Box, Text, Image, Flex, Button, Grid, GridItem, Divider} from "@chakra-ui/react";
+import {Box, Text, Image, Flex,Grid, GridItem} from "@chakra-ui/react";
 import React, { useState } from "react";
 
 interface Estate {
@@ -28,7 +28,7 @@ const DetailsTab: React.FC<DetailsTabProps> = ({ estate }) => {
 
     return (
         <Box>
-            <Flex gap={14} overflowX="auto" mb={6}>
+            <Flex gap={12} mb={6}>
                 {estate.images.map((image, index) => (
                     <Box key={index} position="relative">
                         <Image
@@ -36,7 +36,8 @@ const DetailsTab: React.FC<DetailsTabProps> = ({ estate }) => {
                             src="/img/best.png"
                             alt={image.label}
                             borderRadius="md"
-                            boxSize={{ base: "150px", md: "200px" }}
+                            w='285px'
+                            // boxSize={{ base: "150px", md: "200px" }}
                         />
 
                         <Text
@@ -63,19 +64,19 @@ const DetailsTab: React.FC<DetailsTabProps> = ({ estate }) => {
             </Flex>
 
             <Grid templateColumns={{ base: "1fr", md: "repeat(2, 1fr)" }} gap={4} mb={4}>
-                <Flex justify="space-between">
+                <Flex justify="space-between" fontSize='16px'>
                     <GridItem><Text><b>Name:</b> {estate.type}</Text></GridItem>
                     <GridItem><Text><b>State:</b> {estate.location}</Text></GridItem>
                     <GridItem><Text><b>City:</b> {estate.city}</Text></GridItem>
                     <GridItem><Text><b>Address:</b> {estate.address}</Text></GridItem>
                 </Flex>
-                <Flex justify="space-between">
+                <Flex justify="space-between" fontSize='14px'>
                     <GridItem><Text><b>Popular Landmark:</b> {estate.popularLandmark}</Text></GridItem>
                     <GridItem><Text><b>landSize:</b> {estate.landSize}</Text></GridItem>
                     <GridItem><Text><b>Completion Status:</b> {estate.completionStatus}</Text></GridItem>
                     <GridItem><Text><b>videoUrl:</b> {estate.videoUrl}</Text></GridItem>
                 </Flex>
-                <GridItem><Text><b>Number of Floors:</b> {estate.numberOfFloors}</Text></GridItem>
+                <GridItem fontSize='16px'><Text><b>Number of Floors:</b> {estate.numberOfFloors}</Text></GridItem>
             </Grid>
 
             <Box w="584px" h="150px">
@@ -106,14 +107,6 @@ const DetailsTab: React.FC<DetailsTabProps> = ({ estate }) => {
                     </Text>
                 </Flex>
             </Box>
-            {/*/!* Video Link *!/*/}
-            {/*{estate.videoUrl && (*/}
-            {/*    <Box mt={4}>*/}
-            {/*        <a href={estate.videoUrl} target="_blank" rel="noopener noreferrer">*/}
-            {/*            <Button colorScheme="blue">Watch Video</Button>*/}
-            {/*        </a>*/}
-            {/*    </Box>*/}
-            {/*)}*/}
         </Box>
     );
 };
