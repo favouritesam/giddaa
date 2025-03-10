@@ -17,44 +17,44 @@
 }
 
 html,
-body {
-  margin: 0;
-  font-family: "DM Sans", sans-serif;
-  background-color: #ffffff;
-}
+/*body {*/
+/*  margin: 0;*/
+/*  font-family: "DM Sans", sans-serif;*/
+/*  background-color: #ffffff;*/
+/*}*/
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: rgb(var(--background-rgb));
-}
+/*body {*/
+/*  color: rgb(var(--foreground-rgb));*/
+/*  background: rgb(var(--background-rgb));*/
+/*}*/
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "DM Sans", sans-serif;
-}
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6 {*/
+/*  font-family: "DM Sans", sans-serif;*/
+/*}*/
 
-p,
-span,
-div,
-a {
-  font-family: "DM Sans", sans-serif;
-}
+/*p,*/
+/*span,*/
+/*div,*/
+/*a {*/
+/*  font-family: "DM Sans", sans-serif;*/
+/*}*/
 
-button {
-  font-family: "DM Sans", sans-serif !important;
-}
+/*button {*/
+/*  font-family: "DM Sans", sans-serif !important;*/
+/*}*/
 
-Button {
-  font-family: "DM Sans", sans-serif !important;
-}
+/*Button {*/
+/*  font-family: "DM Sans", sans-serif !important;*/
+/*}*/
 
-th {
-  font-family: "DM Sans", sans-serif !important;
-}
+/*th {*/
+/*  font-family: "DM Sans", sans-serif !important;*/
+/*}*/
 
 ul {
   list-style-type: disc;

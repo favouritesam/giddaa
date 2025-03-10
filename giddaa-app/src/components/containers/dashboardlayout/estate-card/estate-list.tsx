@@ -5,7 +5,7 @@ import {Plus} from "lucide-react";
 import {useRouter} from "next/navigation";
 
 interface EstateListProps {
-    onCreateEstateClick: () => void; // Function to handle "Create Estate" button click
+    onCreateEstateClick: () => void;
 }
 
  const EstateList = ({ onCreateEstateClick }: EstateListProps) => {

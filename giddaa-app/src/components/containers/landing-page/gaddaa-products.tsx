@@ -117,18 +117,18 @@ export default function GaddaaProducts() {
                             <Flex
                                 flex="1"
                                 direction={card.layout === "row" ? { base: "column", md: "row" } : "column"}
-                                align="center"
+                                align="flex-start"
                                 borderRadius="40px"
                                 background="white"
                             >
-                                <Box flex="1" p={18}>
-                                    <Heading size="md" color="#335F32" mb={2}>
+                                <Box flex="1" p={18} textAlign="left">
+                                    <Heading size="md" color="#335F32" mb={2} textAlign="left">
                                         {card.title}
                                     </Heading>
-                                    <Text fontSize="16px" fontWeight={400} color="#000000" mb={4}>
+                                    <Text fontSize="16px" fontWeight={400} textAlign="left" color="#000000" mb={4}>
                                         {card.description}
                                     </Text>
-                                    <Flex gap={6} flexWrap="wrap">
+                                    <Flex gap={6} flexWrap="wrap" justifyContent="flex-start">
                                         <Button
                                             colorScheme="green"
                                             background="#335F32"
@@ -169,6 +169,7 @@ export default function GaddaaProducts() {
                                         objectFit="cover"
                                         borderRadius="10px"
                                         ml={{ md: 5 }}
+                                        alignSelf="center"
                                     />
                                 )}
                             </Flex>

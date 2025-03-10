@@ -34,9 +34,9 @@ export default function Home() {
             <Hero />
             <GaddaaProducts/>
             <PartnersSection />
-            {/*<WhyGiddaaSection />*/}
-            {/*<TestimonialsSection />*/}
-            {/*<AboutUsSection />*/}
+            <WhyGiddaaSection />
+            <TestimonialsSection />
+            <AboutUsSection />
             {/*<GetStartedSection />*/}
         </Box>
     )

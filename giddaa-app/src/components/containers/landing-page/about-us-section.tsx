@@ -1,18 +1,25 @@
 "use client"
 
-import Image from "next/image"
-import { Box, Container, Heading, Text, Link, Circle } from "@chakra-ui/react"
-import { PlayIcon } from "@heroicons/react/24/solid"
+import {Box, Container, Heading, Text, Link, Image} from "@chakra-ui/react"
+import React from "react";
+
 
 export default function AboutUsSection() {
     return (
-        <Box py={{ base: 12, md: 20 }}>
+        <Box py={{base: 12, md: 20}}>
             <Container maxW="container.xl">
-                <Box textAlign="center" mb={8}>
-                    <Heading
-                        as="h2"
-                        fontSize={{ base: "2xl", md: "3xl" }} fontWeight="bold" color="green.800" mb={4}>
+                <Box textAlign="center" mt='4%'>
+                    <Heading as="h2" fontSize={{base: "2xl", md: "3xl"}} color="#335F32" fontWeight="bold" mt="10px"
+                             position="relative" display="inline-block">
                         Know More About Us
+                        <Box
+                            borderBottom="2px solid #335F32"
+                            width="60px"
+                            position="absolute"
+                            bottom="-6px"
+                            left="50%"
+                            transform="translateX(-50%)"
+                        />
                     </Heading>
                     <Text color="gray.600" mb={2}>
                         From our team's tips to your ears – let's tell you about
@@ -22,20 +29,34 @@ export default function AboutUsSection() {
                     </Link>
                 </Box>
 
+
                 <Box
-                    position="relative"
-                    borderRadius="2xl"
-                    overflow="hidden"
-                    maxW="container.md"
+                    border="1px solid #335F32"
+                    borderRadius="40px"
+                    maxW="900px"
                     mx="auto"
-                    h={{ base: "300px", md: "400px" }}
+                    position="relative"
+                    overflow="hidden"
+                    mt='4%'
                 >
-                    <Image src="/placeholder.svg?height=400&width=800" alt="About Giddaa" fill style={{ objectFit: "cover" }} />
-                    <Box position="absolute" top="50%" left="50%" transform="translate(-50%, -50%)">
-                        <Circle size="60px" bg="white" opacity="0.9"
-                                display="flex" alignItems="center" justifyContent="center">
-                            <PlayIcon className="h-8 w-8 text-green-700" />
-                        </Circle>
+                    <Box flex="1" position="relative" cursor='pointer'>
+                        {/*<Image*/}
+                        {/*    src="img/smileGirl.png"*/}
+                        {/*    alt="Testimonial Image"*/}
+                        {/*    width="100%"*/}
+                        {/*    aspectRatio="18/9"  // ✅ Keeps proportions correct*/}
+                        {/*    objectFit="cover"*/}
+                        {/*    height="auto"*/}
+                        {/*/>*/}
+                        <Image
+                            src="/img/smileGirl.png"
+                            alt="Testimonial Image"
+                            width={900}
+                            height={400}
+                            objectFit="cover"
+                        />
+                        <Image src="img/C.png"  position="absolute" top="50%" left="50%"/>
+                        <Image src="img/vidI.png"  position="absolute" top="55%" left="54%"/>
                     </Box>
                 </Box>
             </Container>
