@@ -1,46 +1,21 @@
 "use client"
-import { Box, Button, Container, Flex, Heading, Text, Link,Image } from "@chakra-ui/react"
-import { InfoIcon } from "@chakra-ui/icons"
+import {Box, Button, Container, Flex, Heading, Text, Image, Center} from "@chakra-ui/react"
 import React from "react";
 
 export default function Hero() {
     return (
-        <Box position="relative" overflow="hidden">
+        <Box position="relative" overflow="hidden" mt='4%'>
             <Container maxW="container.xl" py={{ base: 8, md: 12 }}>
-                {/*<Box*/}
-                {/*    position="absolute"*/}
-                {/*    top="10%"*/}
-                {/*    right="5%"*/}
-                {/*    bg="white"*/}
-                {/*    borderRadius="xl"*/}
-                {/*    boxShadow="md"*/}
-                {/*    p={4}*/}
-                {/*    maxW="300px"*/}
-                {/*    display={{ base: "none", md: "block" }}*/}
-                {/*>*/}
-                {/*    <Flex align="center" mb={2}>*/}
-                {/*        <InfoIcon color="green.700" mr={2} />*/}
-                {/*        <Text fontWeight="bold">You're Now on Giddaa Buy</Text>*/}
-                {/*    </Flex>*/}
-                {/*    <Text fontSize="sm">Find and buy your dream home on service/platform.</Text>*/}
-                {/*</Box>*/}
-
-
                 <Box
                     maxWidth="309px"
                     h="109px"
-                    // display='flex'
                     justifyContent="end"
-                    // borderRadius="12px"
                     border="2px solid"
                     borderColor="transparent"
-                    // position="relative"
                     bg="#F9FAFB"
-                    // boxShadow="md"
                     position="absolute"
-                    top="10%"
-                    right="5%"
-                    // bg="white"
+                    top="1%"
+                    right="2%"
                     borderRadius="xl"
                     boxShadow="md"
                     p={4}
@@ -57,7 +32,7 @@ export default function Hero() {
                         WebkitMaskComposite: "destination-out",
                     }}
                 >
-                    <Flex align="center" gap={4}>
+                    <Flex align="center" gap={4} mt='4%'>
                         <Image src="/img/WavingHand.png" alt="wave icon" w="44px" h="44px"/>
                         <Box>
                             <Text fontSize="16px" fontWeight={700}>You’re Now on Giddaa
@@ -68,8 +43,8 @@ export default function Hero() {
                     </Flex>
                 </Box>
 
-                <Box textAlign="center" mb={8}>
-                    <Flex justify="center" align="center" mt="4%" gap='6%'>
+                <Box textAlign="center" mt='2%'>
+                    <Flex justify="center" align="center" mb="2%" gap='6%'>
                         <Flex
                             w="486px"
                             h="46px"
@@ -108,7 +83,7 @@ export default function Hero() {
                         </Text>
                     </Heading>
 
-                    <Text fontSize={{ base: "md", lg: "lg" }} color="gray.600" maxW="container.md" mx="auto" mb={4}>
+                    <Text fontSize={{ base: "md", lg: "lg" }} color="gray.600" maxW="container.md" mx="auto" mt='1%'>
                         <Text fontSize="14px" color="#000000" fontWeight={400} maxW="2xl" lineHeight="28px">
                             We have taken real estate beyond{" "}
                             <Text as="span" textDecoration="underline" color="#000000">mere listings</Text>. Conduct
@@ -120,7 +95,7 @@ export default function Hero() {
                         </Text>
                     </Text>
 
-                    <Flex justify='center' align='center'>
+                    <Flex justify='center' align='center' mt='2%'>
                         <Button
                             w='236px'
                             h='60px'
@@ -144,35 +119,31 @@ export default function Hero() {
                 </Box>
 
 
-                <Flex justify="center" gap={{ base: 4, md: 6 }} flexWrap={{ base: "wrap", md: "nowrap" }} mt={8}>
-                    <Box borderRadius="lg" overflow="hidden" flex="1" maxW={{ base: "100%", md: "33%" }}>
+                <Center gap={{ base: 6, md: 8 }} flexWrap={{ base: "wrap", md: "nowrap" }} mt='6%'>
+                    <Center borderRadius="lg" overflow="hidden" flex="1" maxW={{ base: "100%", md: "33%" }}>
                         <Image
-                            src="/img/house2.png"
+                            src="/img/first.png"
                             alt="house"
                             width={400}
                             height={300}
                             className="w-full h-auto object-cover"
                         />
-                    </Box>
-                    <Box borderRadius="lg" overflow="hidden" flex="1" maxW={{ base: "100%", md: "33%" }}>
                         <Image
-                            src="/img/house2.png"
+                            src="/img/second.png"
                             alt="house"
                             width={400}
                             height={300}
                             className="w-full h-auto object-cover"
                         />
-                    </Box>
-                    <Box borderRadius="lg" overflow="hidden" flex="1" maxW={{ base: "100%", md: "33%" }}>
                         <Image
-                            src="/img/house2.png"
+                            src="/img/third.png"
                             alt="house"
                             width={400}
                             height={300}
                             className="w-full h-auto object-cover"
                         />
-                    </Box>
-                </Flex>
+                    </Center>
+                </Center>
             </Container>
         </Box>
     )

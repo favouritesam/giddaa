@@ -96,10 +96,11 @@ export default function PartnersSection() {
                 </Text>
             </Center>
 
-            <Flex justify="center" gap={4} mt={6} flexWrap="wrap">
+            <Flex justify="center" gap={4} mt='2%' flexWrap="wrap">
                 {categories.map((category, index) => (
                     <Button
                         key={index}
+                        border='1px solid'
                         variant={index === 0 ? "solid" : "outline"}
                         colorScheme="green"
                         borderRadius="50px"

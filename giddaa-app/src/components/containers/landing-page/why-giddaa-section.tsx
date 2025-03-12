@@ -42,12 +42,12 @@ export default function WhyGiddaaSection() {
                             transform="translateX(-50%)"
                         />
                     </Heading>
-                    <Text color="#000000" maxW="container.md" mx="auto" fontWeight={400} fontSize='16px'>
+                    <Text color="#000000" maxW="container.md" mx="auto" fontWeight={400} fontSize='16px' mt='1%'>
                         Reasons why you should embark on your real estate journey with <br/> us, and our products..
                     </Text>
                 </Box>
 
-                <Flex justify="center" flexWrap="wrap" gap={12} mb={14}>
+                <Flex justify="center" flexWrap="wrap" gap={12} mt={16}>
                     {categories.map((category) => (
                         <Button
                             key={category}
@@ -93,10 +93,10 @@ export default function WhyGiddaaSection() {
                         >
                             <VStack align="flex-start" py={12} px={16}>
                                 <Image src="img/gr.png"/>
-                                <Heading as="h3" fontSize="lg" fontWeight="bold">
+                                <Heading as="h3" fontSize="lg" fontWeight="bold" mt='10px'>
                                     {feature.title}
                                 </Heading>
-                                <Text color="#000000" mt='-5%' fontWeight={400} fontSize='16px'>{feature.description}</Text>
+                                <Text color="#000000" fontWeight={400} fontSize='16px' mt='4px'>{feature.description}</Text>
                             </VStack>
                         </Box>
                     ))}

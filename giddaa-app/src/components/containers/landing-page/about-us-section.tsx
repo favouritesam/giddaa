@@ -21,7 +21,7 @@ export default function AboutUsSection() {
                             transform="translateX(-50%)"
                         />
                     </Heading>
-                    <Text color="gray.600" mb={2}>
+                    <Text color="gray.600" mt={14}>
                         From our team's tips to your ears – let's tell you about
                     </Text>
                     <Link color="green.700" fontWeight="medium">
@@ -40,14 +40,6 @@ export default function AboutUsSection() {
                     mt='4%'
                 >
                     <Box flex="1" position="relative" cursor='pointer'>
-                        {/*<Image*/}
-                        {/*    src="img/smileGirl.png"*/}
-                        {/*    alt="Testimonial Image"*/}
-                        {/*    width="100%"*/}
-                        {/*    aspectRatio="18/9"  // ✅ Keeps proportions correct*/}
-                        {/*    objectFit="cover"*/}
-                        {/*    height="auto"*/}
-                        {/*/>*/}
                         <Image
                             src="/img/smileGirl.png"
                             alt="Testimonial Image"
@@ -55,8 +47,8 @@ export default function AboutUsSection() {
                             height={400}
                             objectFit="cover"
                         />
-                        <Image src="img/C.png"  position="absolute" top="50%" left="50%"/>
-                        <Image src="img/vidI.png"  position="absolute" top="55%" left="54%"/>
+                        <Image src="img/C.png"  position="absolute" top="38%" left="43%" w='76.51px' h='76px'/>
+                        <Image src="img/vidI.png"  position="absolute" top="42%" left="46%" w='23.16px' h='34px'/>
                     </Box>
                 </Box>
             </Container>

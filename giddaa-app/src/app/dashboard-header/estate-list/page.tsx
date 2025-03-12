@@ -1,10 +1,13 @@
-
-"use client"
+"use client";
 import {Box} from "@chakra-ui/react";
-import EstateList from "@/components/containers/dashboardlayout/estate-card/estate-list";
 import {useRouter} from "next/navigation";
+import EstateList from "@/components/containers/dashboardlayout/estate-card/estate-list-wrapper";
 
-export default function EstateListPage() {
+interface EstateListProps {
+    onCreateEstateClick?: () => void
+}
+
+export default function EstateListPage({onCreateEstateClick}: EstateListProps) {
     const router = useRouter();
 
     const handleCreateEstateClick = () => {
@@ -16,4 +19,4 @@ export default function EstateListPage() {
             <EstateList onCreateEstateClick={handleCreateEstateClick}/>
         </Box>
     );
-}
+};

@@ -1,17 +1,3 @@
-// // import {Box} from "@chakra-ui/react";
-// // import Navbar from "@/components/containers/landing-page/navbar/navbar";
-// // import RealEstateHero from "@/components/containers/landing-page/find-a-home";
-// //
-// // export default function NavbarPage(){
-// //     return(
-// //         <Box>
-// //             <Navbar/>
-// //             <RealEstateHero/>
-// //         </Box>
-// //     )
-// // }
-
-
 "use client"
 
 import AboutUsSection from "@/components/containers/landing-page/about-us-section"
@@ -21,12 +7,23 @@ import PartnersSection from "@/components/containers/landing-page/partners-secti
 import TestimonialsSection from "@/components/containers/landing-page/testimonials-section"
 import WhyGiddaaSection from "@/components/containers/landing-page/why-giddaa-section"
 import { Box, useColorModeValue } from "@chakra-ui/react"
-import GetStartedSection from "@/components/containers/landing-page/get-started-section";
 import GaddaaProducts from "@/components/containers/landing-page/gaddaa-products";
+import {useEffect, useState} from "react";
+import GetStarted from "@/components/containers/landing-page/get-started-section";
+import Footer from "@/components/containers/landing-page/footer"
 
 
 export default function Home() {
     const bgColor = useColorModeValue("white", "gray.800")
+
+    const [isClient, setIsClient] = useState(false)
+
+    useEffect(() => {
+        setIsClient(true)
+    }, [])
+    if (!isClient) {
+        return null; // Avoid rendering until the component is mounted
+    }
 
     return (
         <Box bg={bgColor} minH="100vh">
@@ -37,7 +34,8 @@ export default function Home() {
             <WhyGiddaaSection />
             <TestimonialsSection />
             <AboutUsSection />
-            {/*<GetStartedSection />*/}
+            <GetStarted/>
+            <Footer/>
         </Box>
     )
 }

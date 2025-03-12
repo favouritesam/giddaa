@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react"
+import React, {useState} from "react"
 import {Box, Container, Flex, Heading, Text, VStack, Image, Button} from "@chakra-ui/react"
 
 
@@ -10,7 +10,7 @@ export default function TestimonialsSection() {
     const [activeCategory, setActiveCategory] = useState("BUY")
 
     return (
-        <Box py={{ base: 12, md: 20 }}>
+        <Box py={{base: 12, md: 20}}>
             <Container maxW="container.xl">
                 <Box textAlign="center" mt='10%'>
                     <Heading as="h2" fontSize={{base: "2xl", md: "3xl"}} color="#335F32" fontWeight="bold" mt="10px"
@@ -25,12 +25,12 @@ export default function TestimonialsSection() {
                             transform="translateX(-50%)"
                         />
                     </Heading>
-                    <Text color="#000000" maxW="container.md" mx="auto" fontWeight={400} fontSize='16px' mt='-2px'>
+                    <Text color="#000000" maxW="container.md" mx="auto" fontWeight={400} fontSize='16px' mt='12px'>
                         What our customers and partners think about us.
                     </Text>
                 </Box>
 
-                <Flex justify="center" flexWrap="wrap" gap={12} mb={14}>
+                <Flex justify="center" flexWrap="wrap" gap={12} mt='2%'>
                     {categories.map((category) => (
                         <Button
                             key={category}
@@ -59,17 +59,17 @@ export default function TestimonialsSection() {
                 <Flex
                     border="1px solid #335F32"
                     borderRadius="40px"
-                    p={6}
+                    pl={6}
                     align="center"
                     maxW="900px"
                     mx="auto"
+                    h='500px'
                     position="relative"
                     bg="linear-gradient(135deg, #FFEDCB, #F6FDF4, #FFFFFB)"
                     overflow="hidden"
                     mt='4%'
                 >
-                    {/* Left Side - Profile and Testimonial */}
-                    <VStack align="flex-start" spacing={3} flex="1" p={6}>
+                    <VStack align="flex-start" spacing={3} flex="1" p={6} mb='4%'>
                         <Image
                             src="img/smileGirl.png"
                             alt="Profile"
@@ -95,22 +95,18 @@ export default function TestimonialsSection() {
                         </Text>
                     </VStack>
 
-                    {/* Right Side - Large Image with Play Button */}
-                    <Box flex="1" position="relative">
+                    <Box flex="1" position="relative" w='100%'
+                         h='100%'>
                         <Image
                             src="img/smileGirl.png"
                             alt="Testimonial Image"
                             borderRadius="md"
-                            width='100%'
-                            h='100%'
                             objectFit="cover"
+                            w='100%'
+                            h='100%'
                         />
-                        <Image src="img/C.png"  position="absolute"
-                               top="50%"
-                               left="50%"/>
-                        <Image src="img/vidI.png"  position="absolute"
-                               top="55%"
-                               left="58%"/>
+                        <Image src="img/C.png" position="absolute" top="44%" left="42%" w='76.51px' h='76px'/>
+                        <Image src="img/vidI.png" position="absolute" top="48%" left="49%"/>
                     </Box>
 
                     <VStack
@@ -133,10 +129,10 @@ export default function TestimonialsSection() {
                         >
                             1
                         </Box>
-                        <Box width="2px" height="40px" bg="gray.300" />
-                        <Box width="30px" height="30px" borderRadius="full" bg="gray.300" />
-                        <Box width="2px" height="40px" bg="gray.300" />
-                        <Box width="30px" height="30px" borderRadius="full" bg="gray.300" />
+                        <Box width="2px" height="40px" bg="gray.300"/>
+                        <Box width="30px" height="30px" borderRadius="full" bg="gray.300"/>
+                        <Box width="2px" height="40px" bg="gray.300"/>
+                        <Box width="30px" height="30px" borderRadius="full" bg="gray.300"/>
                     </VStack>
                 </Flex>
 

@@ -71,15 +71,15 @@ export default function GaddaaProducts() {
                 <Heading as="h2" size="lg" color="#335F32" fontWeight="bold" mt="20px" position="relative" display="inline-block">
                     Products
                     <Box
-                        borderBottom="4px solid #335F32"
-                        width="60px"
+                        borderBottom="2px solid #335F32"
+                        width="40px"
                         position="absolute"
                         bottom="-6px"
                         left="50%"
                         transform="translateX(-50%)"
                     />
                 </Heading>
-                <Text fontSize={{ base: "14px", md: "16px" }} fontWeight={400} color="gray.700" mt="12px">
+                <Text fontSize={{ base: "14px", md: "16px" }} fontWeight={400} color="gray.700" mt="1%">
                     Get started with one of our carefully crafted products <br />
                     & services.
                 </Text>
@@ -88,7 +88,7 @@ export default function GaddaaProducts() {
 
 
             <Center>
-                <Flex flexWrap="wrap" justify="center" gap={10} maxW="1226px">
+                <Flex flexWrap="wrap" justify="center" gap={10} maxW="1226px" mt='2%'>
                     {cards.map((card, index) => (
                         <Box
                             key={index}
@@ -121,14 +121,14 @@ export default function GaddaaProducts() {
                                 borderRadius="40px"
                                 background="white"
                             >
-                                <Box flex="1" p={18} textAlign="left">
-                                    <Heading size="md" color="#335F32" mb={2} textAlign="left">
+                                <Box flex="1" p={34} textAlign="left">
+                                    <Heading size="24px" color="#335F32" fontWeight={700} mb={2} textAlign="left">
                                         {card.title}
                                     </Heading>
-                                    <Text fontSize="16px" fontWeight={400} textAlign="left" color="#000000" mb={4}>
+                                    <Text fontSize="16px" fontWeight={400} textAlign="left" color="#000000" mt={10}>
                                         {card.description}
                                     </Text>
-                                    <Flex gap={6} flexWrap="wrap" justifyContent="flex-start">
+                                    <Flex gap={14} flexWrap="wrap" justifyContent="flex-start">
                                         <Button
                                             colorScheme="green"
                                             background="#335F32"
@@ -154,6 +154,7 @@ export default function GaddaaProducts() {
                                                 borderRadius='100px'
                                                 bg='#FFFFFF'
                                                 mt='10%'
+                                                border='1px solid #335F32'
                                                 _hover={{ background: "#f0f0f0" }}
                                             >
                                                 {card.buttonText2}
